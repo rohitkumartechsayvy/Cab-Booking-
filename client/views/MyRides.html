@@ -1,0 +1,36 @@
+<div>
+    <center>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><h3 align= "center">My Rides</h3></th>
+                </tr>
+
+                <tr>
+                    <th>Pickup Location </th>
+                    <th>Destination Location</th>
+                    <th>Ride Date</th>
+                    <th>Driver Name</th>
+                    <th>Vehicle</th>
+                    <th>Distance</th>
+                    <th>Booking Type</th>
+                    <th>Total Fare</th>
+                    <th>Status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat = 'data in datalist'>
+                        <td>{{data.PickupLocation}}</td>
+                        <td>{{data.DestinationLocation}}</td>
+                        <td>{{data.PickupDate}}</td>
+                        <td>{{data.Driver.name}}</td>
+                        <td>{{data.Cab.cabrRegno}}</td>
+                        <td>{{data.Distance}}</td>
+                         <td>{{data.BookingType}}</td>
+                        <td>{{data.Fare}}</td>
+                         <td>{{data.BookingStatus}}</td>
+                    </tr>
+            </tbody>
+        </table>
+    </center>

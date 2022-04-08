@@ -1,0 +1,162 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			 <a id="modal-839749" href="#modal-container-839749" role="button" class="btn" data-toggle="modal">Add New Tarrif Plan</a>
+			 <br> <br> <br>
+			<div class="container-fluid2">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							Cab Type
+						</th>
+						<th>
+							Normal Hour Rate/Km
+						</th>
+						<th>
+							Peak Hour Rate/Km
+						</th>
+						<th>
+							Start Peak Time
+						</th>
+						<th>
+							End Peak Time
+						</th>
+						<th>
+							Edit
+						</th>
+						<th>
+							Delete
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat= "a in tarfList">
+						<td>
+							{{a.cabrcarType}}
+						</td>
+						<td>
+							{{a.tarfNormalrate}}
+						</td>
+						<td>
+							{{a.tarfPeakrate}}
+						</td>
+						<td>
+							{{a.tarfStartpeak}}
+						</td>
+						<td>
+							{{a.tarfEndpeak}}
+						</td>
+						<td>
+						
+						<button id="modal-839749" href="#modal-container-839749" data-toggle="modal" ng-click="editTarf(a)" class="btn btn-success">Edit</button>
+						
+						</td>
+						<td>
+							<button ng-click="removeTarf(a)" class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+					
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+			<div class="modal fade" id="modal-container-839749" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							 
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								×
+							</button>
+							<h4 class="modal-title" id="myModalLabel">
+								Add New Tarrif Plan
+							</h4>
+
+						</div>
+
+						
+						<div class="modal-body">
+							<form class="form-horizontal" role="form">
+				
+								
+								<div class="form-group">
+					 
+					<label for="selectType" class="col-sm-1 control-label" >
+						
+					</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="selectType" ng-model="tarf.cabrcarType" >
+							<option >---Select Cab Type---</option>
+							<option>Micro</option>
+							<option>Mini</option>
+							<option>Prime Sedan</option>
+							<option>Prime Suv</option>
+							</select>
+
+					</div>
+				</div>
+
+
+								<div class="form-group">
+					 
+									<label for="selectNrate" class="col-sm-1 control-label" >
+						
+									</label>
+								<div class="col-sm-10">
+									<input class="form-control" id="selectNrate" placeholder="Normal Hour Rate Per Km" ng-model="tarf.tarfNormalrate" />
+								</div>
+								</div>
+
+								<div class="form-group">
+					 
+					<label for="selectPrate" class="col-sm-1 control-label" >
+						
+					</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="selectPrate"  placeholder= "Peak Hour Rate Per Km" ng-model="tarf.tarfPeakrate" />
+					</div>
+				</div>
+
+				<div class="form-group">
+
+					<label for="starttimepicker" class="col-sm-1 control-label" >
+						
+					</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="starttimepicker" type="text" placeholder= "Starting Peak Hour" ng-model="tarf.tarfStartpeak" />
+					</div>
+				</div>
+
+				<div class="form-group">
+
+					<label for="endtimepicker" class="col-sm-1 control-label" >
+						
+					</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="endtimepicker" type="text" placeholder= "Ending Peak Hour"  ng-model="tarf.tarfEndpeak" />
+					</div>
+				</div>
+
+						</div>
+						<div class="modal-footer">
+							 
+							
+							<button type="button" class="btn btn-primary" ng-click="addTarf(tarf)">
+								Save 
+							</button>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</div>

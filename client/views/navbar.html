@@ -1,0 +1,53 @@
+<nav class="navbar navbar-default my-navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+                <a class="navbar-brand" href="#/">JustCruze</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/">Home</a></li>
+                    
+                    <li ng-show = "nav.isLoggedIn && nav.UserType == 'Driver'"><a href="#Rides/">My Rides</a></li>
+                    <li ng-show = "nav.isLoggedIn && nav.UserType == 'Driver'"><a href="#Driver/">Driver Map</a></li>
+                    <li ng-show = "nav.isLoggedIn && nav.UserType == 'Customer'"><a href="#/Profile">Book Cab</a></li>
+                    <li ng-show = "nav.isLoggedIn && nav.UserType == 'Customer'"><a href="#/Rides">My Rides</a></li>
+                    <li class = "dropdown" ng-show =  "nav.isLoggedIn && nav.UserType == 'Admin'">
+                        <a href = "#/" class = "dropdown-toggle" data-toggle = "dropdown" role="button" >Admin</a>
+                            <ul class = "dropdown-menu">
+                                <li><a href= "#/CabDriver" style="font-family: cursive;">Add Cab</a><li>
+                                <li role= "separator" class= "divider"></li>
+                                <li><a href= "#/Tarrif" style="font-family: cursive;" >Add Tarrif</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class= "navbar-form navbar-left">
+                            <div class= "form-group">
+                    <!--<li><div ng-service="AuthenticationService">-->
+                        
+                      </div>
+                    </form>
+                    <ul ng-show = "nav.isLoggedIn" class= "nav navbar-nav navbar-right">
+                        <li><a href= "#" style="font-family: Lucida Console, Courier, monospace;">Welcome {{nav.FirstName}}</a></li>
+                        <li><a href="#" ng-click='LogoutUser()' class="btn btn-default">Logout</a></li>
+                    </ul>
+                    <ul ng-hide = "nav.isLoggedIn" class= "nav navbar-nav navbar-right">
+                        <li><a href= "#" style="font-family: cursive;">Welcome, Guest</a></li>
+                        <li><a href= "#/Login" style="font-family: cursive;">Login</a></li>
+                        <li><a href= "#/Register" style="font-family: cursive;">Register</a></li>
+                    </ul>
+
+                
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>

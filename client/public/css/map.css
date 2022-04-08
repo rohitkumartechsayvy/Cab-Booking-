@@ -1,0 +1,71 @@
+/* Put your css in here */
+
+.angular-google-map-container {
+  height: 700px;
+  width: 600px;
+  margin-bottom: 15px;
+}
+
+
+
+.panel-primary {
+  padding: 15px;
+  width: 500px;
+}
+
+.form-group{
+
+  width: 650px;
+}
+
+.container-fluid1{
+	background-color: white;
+  height: 100px;
+	width: 630px;
+	border : 2px solid lightgrey;
+	border-radius: 5px;
+	padding : 25px;
+
+
+}
+.btn-primary{
+  width: 100%;
+}
+
+.btn-primary1{
+  width: 92%;
+  background-color: #006699;
+  border-radius: 7px; 
+  color: white;
+}
+.button:hover {background-color: #0066FF}
+.button:active {
+  background-color: #0066FF;
+
+  transform: translateY(4px);
+}
+/*.button{
+  background-color: #006699;
+  border-radius: 7px;
+  
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px;
+  cursor: pointer;
+}
+.button:hover {background-color: #0066FF}
+.button:active {
+  background-color: #0066FF;
+
+  transform: translateY(4px);
+}*/
+
+  
+.img{
+
+  height: 10px;
+  width: 10px;
+}

@@ -1,0 +1,164 @@
+<h2 align="center">JustCruze</h2><div class="jumbotron text-center">
+	<div class="container">
+<div class="row"> 
+  <div class="col-md-4">
+           <div class="inline-top image w_300px padding-right-50px">
+               <div class="vectored-iphone">
+                   <input type="hidden" id="slider_id" value="mobile_iphone_android">
+                   <div class="img-wrapper">
+                       <div class="slider-bg-iphone">
+                             <div class="gallery-wrapper">
+                               <div id="mobile_iphone_android" class="slideshow-img text-center">
+                                   <img style="" src="public/images/phone.png" />
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div id="toggleSlideGreen">
+                       <div class="slideButton activeSlide" data-index="0"></div>
+                       <div class="slideButton defaultSlide" data-index="1"></div>
+                       <div class="slideButton defaultSlide" data-index="2"></div>
+                       <div class="slideButton defaultSlide" data-index="3"></div>
+                       <div class="slideButton defaultSlide" data-index="4"></div>
+                       <div class="slideButton defaultSlide" data-index="5"></div>
+                   </div>
+               </div>
+           </div>
+         </div>
+         <div class="col-md-8">
+           <div class="inline-top text w_five_five_zero">
+               <div class="iphoneText">
+                   <div class="rightContText">
+                       <div id="screen1">
+                           <div class="boldText"> Pickup from anywhere. </div>
+                           <div class="silverText"> Search or move pin to pickup location and tap <i>Ride now</i>. </div>
+                       </div>
+                       <div style="display: none;" id="screen2">
+                           <div class="boldText"> Plan ahead. </div>
+                           <div class="silverText"> Don't want a ride now? Schedule a pickup with <i>Ride later</i>.</div>
+                       </div>
+                       <div style="display: none;" id="screen3">
+                           <div class="boldText"> Add your favourite place. </div>
+                           <div class="silverText"> Tap a favourite to use it as your pickup location. </div>
+                       </div>
+                       <div style="display: none;" id="screen4">
+                           <div class="boldText">  Spread the love. </div>
+                           <div class="silverText"> Love the app? Invite friends and earn <i>Ola Money</i>. </div>
+                       </div>
+                       <div style="display: none;" id="screen5">
+                           <div class="boldText">  No cash hassles. </div>
+                           <div class="silverText"> Pay with Ola Money and ride in peace. </div>
+                       </div>
+                       <div style="display: none;" id="screen6">
+                           <div class="boldText">  All rides in your pocket. </div>
+                           <div class="silverText"> See upcoming or past rides, track rides and more. </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 <div>
+
+<style type="text/css">
+  
+
+
+</style>
+
+
+
+
+<script type="text/javascript">
+  
+
+  // If not iPhone, play first video and setup event handlers for  carousel rotations
+// iPhone will not play videos inline, and will take control of the browser
+if(!/iPhone/i.test(navigator.userAgent)) {
+    $('.active > div > video').get(0).play();
+
+    $('#carousel').bind('slide.bs.carousel', function(e) {
+      $(e.relatedTarget).find('video').get(0).play();
+    });
+
+    $('#carousel').bind('slid.bs.carousel', function(e) {
+      $('video').not('.active > div > video').each(function() {
+        $(this).get(0).pause();
+      });
+    });
+  }
+</script>
+<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+      <li data-target="#carousel" data-slide-to="3"></li>
+  </ol>
+  
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="slide-content">
+        <video poster="http://192.241.175.50/videos/london.jpg" webkit-playsinline id="bgvid" loop>
+          <source src="http://192.241.175.50/videos/london.webm" type="video/webm">
+          <source src="http://192.241.175.50/videos/london.mp4" type="video/mp4">
+        </video>
+        <div class="slide-overlay door">
+          <div class='title'></div>
+          <div class="description">  </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="slide-content">
+        <video poster="http://192.241.175.50/videos/boston.jpg" webkit-playsinline id="bgvid" loop>
+          <source src="http://192.241.175.50/videos/boston.webm" type="video/webm">
+          <source src="http://192.241.175.50/videos/boston.mp4" type="video/mp4">
+        </video>
+        <div class="slide-overlay door">
+          <div class='title'></div>
+          <div class="description">  </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="slide-content">
+        <video poster="http://192.241.175.50/videos/split.jpg" webkit-playsinline id="bgvid" loop>
+          <source src="http://192.241.175.50/videos/split.webm" type="video/webm">
+          <source src="http://192.241.175.50/videos/split.mp4" type="video/mp4">
+        </video>
+        <div class="slide-overlay door">
+          <div class='title'></div>
+          <div class="description"></div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="slide-content">
+        <video poster="http://192.241.175.50/videos/samo.jpg" webkit-playsinline id="bgvid" loop>
+          <source src="http://192.241.175.50/videos/samo.webm" type="video/webm">
+          <source src="http://192.241.175.50/videos/samo.mp4" type="video/mp4">
+        </video>
+        <div class="slide-overlay door">
+          <div class='title'></div>
+          <div class="description"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="carousel-control left" href="#carousel" data-slide="prev">
+   <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  
+  <a class="carousel-control right" href="#carousel" data-slide="next">
+   <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+  
+</div>
+</div>
+               </div>
+         </div>
+
+       </div>
+
+</div>
